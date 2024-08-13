@@ -23,7 +23,7 @@ import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
 import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export const MacbookScroll = ({
   src,
@@ -31,7 +31,7 @@ export const MacbookScroll = ({
   title,
   badge,
 }: {
-  src?: string;
+  src?: string | StaticImageData;
   showGradient?: boolean;
   title?: string | React.ReactNode;
   badge?: React.ReactNode;
