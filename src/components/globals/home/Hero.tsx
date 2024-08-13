@@ -26,6 +26,7 @@ import { Section, Container } from "@/components/crafts";
 // Assets
 import Placeholder from "@/assets/placeholder.jpg";
 import { MacbookScroll } from "./MacbookHero";
+import { FlipWordsComponent } from "./FlipWordsComponent";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -65,42 +66,15 @@ export default function Hero() {
           </Button>
           <h1 className="mb-2 text-6xl">
             <Balancer>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              <FlipWordsComponent />
             </Balancer>
           </h1>
-          <h3 className="text-muted-foreground">
+          <h3 className="text-gray-200">
             <Balancer>
               Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </Balancer>
           </h3>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-2 text-left"
-            >
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="sr-only">Email</FormLabel>
-                    <FormControl>
-                      <Input
-                        className="md:w-96"
-                        placeholder="Enter your email address"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <Button className="w-full" type="submit">
-                Submit
-              </Button>
-            </form>
-          </Form>
           <MacbookScroll src={Placeholder} />
         </div>
       </Container>
