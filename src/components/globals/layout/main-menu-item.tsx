@@ -13,7 +13,7 @@ const MainMenuItem: React.FC<Props> = ({ title, link, className }) => {
     <Link
       href={link}
       className={cn(
-        "rounded bg-white px-3 py-2 transition hover:bg-gray-100",
+        "rounded px-3 py-2 transition text-gray-100 hover:text-rose-600",
         className
       )}
     >

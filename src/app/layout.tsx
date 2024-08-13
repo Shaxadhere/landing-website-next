@@ -3,7 +3,6 @@ import { Lato } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import "./app.css";
-import Logo from "@/components/globals/Items/logo";
 import Header from "@/components/globals/layout/header";
 import Footer from "@/components/globals/layout/footer";
 
@@ -27,10 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          inter.variable
-        )}
+        className={cn("min-h-screen bg-background font-sans antialiased", inter.variable)}
       >
         <Header />
         {children}

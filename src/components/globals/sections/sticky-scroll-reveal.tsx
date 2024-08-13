@@ -11,6 +11,7 @@ export const StickyScroll = ({
   content: {
     title: string;
     description: string;
+    description2: string;
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
@@ -84,11 +85,19 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-slate-900"
+                className="text-2xl font-bold text-slate-100"
               >
                 {item.title}
               </motion.h2>
-              <motion.h2 className="text-xl text-slate-800 mb-6">
+              <motion.h2
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                className="text-xl text-gray-300 mb-6"
+              >
                 Simplify account management with our intuitive tools and
                 features
               </motion.h2>
@@ -99,9 +108,20 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-slate-800 max-w-[80%] mt-10"
+                className="text-kg text-gray-300 max-w-[80%] mt-10 line-clamp-3"
               >
                 {item.description}
+              </motion.p>
+              <motion.p
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: activeCard === index ? 1 : 0.3,
+                }}
+                className="text-kg text-gray-300 max-w-[80%] mt-10 line-clamp-3"
+              >
+                {item.description2}
               </motion.p>
             </div>
           ))}
