@@ -114,7 +114,7 @@ export const Lid = ({
   scaleY: MotionValue<number>;
   rotate: MotionValue<number>;
   translate: MotionValue<number>;
-  src?: string;
+  src?: string | StaticImageData;
 }) => {
   return (
     <div className="relative [perspective:800px]">
