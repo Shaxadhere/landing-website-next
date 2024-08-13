@@ -8,7 +8,7 @@ interface Props extends MenuItem {
 
 const FooterNavItem: React.FC<Props> = ({ title, link }) => {
   return (
-    <Link href={link} className="transition hover:text-gray-900">
+    <Link href={link} className="transition text-hover-200 hover:text-gray-100">
       {title}
     </Link>
   );
